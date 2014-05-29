@@ -47,6 +47,10 @@ input[type="text"] {
 	width: 250px;
 	max-width: 250px;
 }
+.task-wrapper input[type="text"] {
+	width: 300px;
+	max-width: 300px;
+}
 input[type="text"]:focus {
 	color: #000;
 }
@@ -168,7 +172,7 @@ input[type="submit"]:hover {
     clear: both;
 }
 .project {
-	width: 35%;
+	width: 30%;
 	float: left;
 }
 .project input,
@@ -185,7 +189,7 @@ input[type="submit"]:hover {
 	margin-bottom: 200px;
 }
 .task-wrapper {
-	width: 64%;
+	width: 69%;
 	float: left;
 }
 .task {
@@ -214,7 +218,7 @@ input[type="submit"]:hover {
 .task.timer-on .timer {
 	display: inline-block;
 }
-.timer input {
+.task-wrapper .timer input {
 	width: 24px;
 	padding: 5px 2px;
 }

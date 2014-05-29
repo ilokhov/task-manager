@@ -63,7 +63,6 @@ function TaskCtrl($scope) {
 }
 
 function Timer($scope, $timeout) {
-    // $scope.seconds = '0' + $scope.seconds.toString();
     $scope.seconds = '00';
     $scope.minutes = '00';
     $scope.hours = '00';
