@@ -1,15 +1,11 @@
-task-manager
+Task manager
 ============
 A simple web app for managing tasks based on AngularJS for personal use
 
 http://ilokhov.github.io/task-manager/
 
 ##Further development
-- add import and export functions (csv format)
-- improve layout (reduce project wrapper width, increase task wrapper width and width of text and textarea inputs within the task wrapper)
-- refactor code in the timer controller
-- add the redmine ticket number utility
-- refactor css/possibly incorporate SCSS
+- add import and export functions (csv/json)
 - potentially add support for exporting into Easy Redmine project management software
 
 ##Compatibility

@@ -1,17 +1,14 @@
 /*animations*/
 .animate.ng-enter {
- -webkit-transition: 0.2s linear all; /* Safari/Chrome */
- transition: 0.2s linear all; /* All other modern browsers and IE10+ */
-
- /* The animation preparation code */
- opacity: 0;
+	-webkit-transition: 0.2s linear all;
+	transition: 0.2s linear all;
+	opacity: 0;
 }
 .animate.ng-enter.ng-enter-active {
- /* The animation code itself */
- opacity: 1;
+	opacity: 1;
 }
 
-/*general*/
+/*reset*/
 html, body, div, span, iframe,
 h1, h2, h3, h4, h5, h6,
 p, a, img, ol, ul, li,
@@ -33,6 +30,7 @@ body {
 ol, ul {
     list-style: none;
 }
+/*general*/
 input,
 textarea {
 	margin: 0;
@@ -47,10 +45,6 @@ input[type="text"] {
 	width: 250px;
 	max-width: 250px;
 }
-.task-wrapper input[type="text"] {
-	width: 300px;
-	max-width: 300px;
-}
 input[type="text"]:focus {
 	color: #000;
 }
@@ -62,7 +56,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background: #444;
 }
-
 /*utilities*/
 .utility {
 	display: inline-block;
@@ -102,7 +95,7 @@ input[type="submit"]:hover {
 .done:hover {
 	background-image: url(../img/done-hover.png);
 }
-
+/*page*/
 .overlay {
 	position: fixed;
     top: 0;
@@ -157,7 +150,6 @@ input[type="submit"]:hover {
 	min-width: 1024px;
 	margin: 100px auto 0;
 }
-
 .project-list {
 	margin-bottom: 20px;
 	border-bottom: 2px solid #7cb6c5;
@@ -191,6 +183,10 @@ input[type="submit"]:hover {
 .task-wrapper {
 	width: 69%;
 	float: left;
+}
+.task-wrapper input[type="text"] {
+	width: 300px;
+	max-width: 300px;
 }
 .task {
 	margin-bottom: 10px;
@@ -234,6 +230,8 @@ input[type="submit"]:hover {
 	border-radius: 2px;
 	border: 1px solid #aaa;
 	display: inline-block;
+	width: 64px;
+	text-align: center;
 }
 .timer-button:hover {
 	background: #444;
@@ -241,8 +239,8 @@ input[type="submit"]:hover {
 .task textarea {
 	display: none;
 	float: right;
-	width: 263px;
-	max-width: 263px;
+	width: 288px;
+	max-width: 288px;
 	margin: 0!important;
 }
 .task.notes-on textarea {
