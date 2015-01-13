@@ -147,7 +147,7 @@ input[type="submit"]:hover {
 .main {
 	width: 80%;
 	max-width: 1200px;
-	min-width: 1024px;
+	min-width: 1080px;
 	margin: 100px auto 0;
 }
 .project-list {
@@ -245,6 +245,7 @@ input[type="submit"]:hover {
 }
 .task.notes-on textarea {
 	display: inline-block;
+	clear: both;
 }
 .task.timer-on.notes-on textarea {
 	margin-top: 10px!important;
