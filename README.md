@@ -1,6 +1,6 @@
 Task manager
 ============
-A simple web app for managing tasks based on AngularJS for personal use
+A simple web app for managing tasks written in AngularJS
 
 http://ilokhov.github.io/task-manager/
 

@@ -1,4 +1,4 @@
-/*animations*/
+/* animations */
 .animate.ng-enter {
 	-webkit-transition: 0.2s linear all;
 	transition: 0.2s linear all;
@@ -8,245 +8,184 @@
 	opacity: 1;
 }
 
-/*reset*/
+/* border box */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* reset */
 html, body, div, span, iframe,
 h1, h2, h3, h4, h5, h6,
 p, a, img, ol, ul, li,
-form, label,
-table, tbody, thead, tr, th, td {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 body {
-    line-height: 1;
-    font-family: sans-serif;
-    font-size: 22px;
-    color: #444;
-}
-ol, ul {
-    list-style: none;
-}
-/*general*/
-input,
-textarea {
-	margin: 0;
-	padding: 5px 10px;
-	font-size: 22px;
-	border-radius: 2px;
-	border: 1px solid #aaa;
-	color: #444;
+	line-height: 1;
 	font-family: sans-serif;
+	font-size: 22px;
+	color: #222;
 }
+ul {
+	list-style: none;
+}
+
+/* inputs */
 input[type="text"] {
-	width: 250px;
-	max-width: 250px;
+	margin: 0;
+	padding: 8px 16px;
+	border: 1px solid #222;
+	-webkit-appearance: none;
+	color: #222;
+	font-size: 18px;
+	font-family: sans-serif;
+	border-radius: 5px 0 0 5px;
+	border-color: #aaa;
+	border-right: 0;
+}
+input[type="text"]:hover {
+	border-color: #4078c0;
 }
 input[type="text"]:focus {
-	color: #000;
+	color: #222;
 }
-input[type="submit"] {
+
+/* buttons */
+.btn {
+	margin: 0;
+	padding: 8px 16px;
+	border: 1px solid #4078c0;
+	font-size: 18px;
+	font-family: sans-serif;
 	color: #fff;
-	background: #999;
+	background: #4078c0;
 	cursor: pointer;
+	border-radius: 5px;
+	-webkit-appearance: none;
 }
-input[type="submit"]:hover {
-	background: #444;
-}
-/*utilities*/
-.utility {
-	display: inline-block;
-	visibility: hidden;
-}
-.project:hover .utility,
-.task:hover .utility {
-	visibility: visible;
-}
-.button {
-	width: 16px;
-	height: 16px;
-	cursor: pointer;
-	display: inline-block;
-}
-.delete {
-	background: url(../img/delete.png) 0 0 no-repeat;
-}
-.delete:hover {
-	background-image: url(../img/delete-hover.png);
-}
-.clock {
-	background: url(../img/clock.png) 0 0 no-repeat;
-}
-.clock:hover {
-	background-image: url(../img/clock-hover.png);
-}
-.note {
-	background: url(../img/text.png) 0 0 no-repeat;
-}
-.note:hover {
-	background-image: url(../img/text-hover.png);
-}
-.done {
-	background: url(../img/done.png) 0 0 no-repeat;
-}
-.done:hover {
-	background-image: url(../img/done-hover.png);
-}
-/*page*/
-.overlay {
-	position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9;
-    color: #fff;
-    display: none;
-}
-.overlay.active {
-	display: block;
-}
-.menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 99;
+.btn:hover {
 	background: #fff;
+	color: #4078c0;
 }
-.menu.active {
-	height: 100%;
-	padding: 0 20px 20px 0;
-	min-width: 200px;
+.btn-add {
+	border-radius: 0 5px 5px 0;
 }
-.menu-button {
-	width: 64px;
-	height: 64px;
+.btn-add:hover {
+	background: #fff;
+	color: #4078c0;
+}
+.btn-remove {
+	border-radius: 0 5px 5px 0;
+}
+.btn-remove:hover {
+	background: #fff;
+	color: #bd2c00;
+	border-color: #bd2c00;
+}
+.btn-complete {
+	margin-left: 0.5em;
+}
+.btn-complete:hover {
+	color: #4a4;
+	border-color: #4a4;
+}
+
+/* page */
+.wrap {
+	width: 1000px;
+	margin: 2em auto
+}
+header {
+	display: flex;
+	justify-content: space-between;
+}
+.restart {
+	text-decoration: underline;
 	cursor: pointer;
-	background: url(../img/menu.png) 7px 7px no-repeat;
-	background-size: 75%;
+	color: #4078c0;
 }
-.menu ul {
-	display: none;
+.restart:hover {
+	text-decoration: none;
 }
-.menu.active ul {
-	display: block;
+main {
+	width: 1000px;
+	margin: 2em auto;
 }
-.menu li {
-	padding: 10px;
-	width: 100%;
-	cursor: pointer;
+
+/* project */
+.project-add {
+	width: 30%;
+	display: flex;
+	margin-bottom: 10em;
 }
-.menu li:hover {
-	background: #444;
-	color: #FFF;
+.project-add input[type="text"] {
+	flex: 1;
 }
-.main {
-	width: 80%;
-	max-width: 1200px;
-	min-width: 1080px;
-	margin: 100px auto 0;
-}
+
 .project-list {
-	margin-bottom: 20px;
-	border-bottom: 2px solid #7cb6c5;
-	padding: 0 0 40px;
+	margin-bottom: 2em;
+	border-bottom: 1px solid #e6e6e6;
+	padding: 0 0 4em;
 }
 .project-wrapper:before,
 .project-wrapper:after {
-    content: " ";
-    display: table;
+	content: " ";
+	display: table;
 }
 .project-wrapper:after {
-    clear: both;
+	clear: both;
 }
 .project {
 	width: 30%;
+	display: flex;
 	float: left;
 }
-.project input,
-.task input,
-.task textarea {
-	border: 1px solid #fff;
+.project input[type="text"],
+.task input[type="text"] {
+	flex: 1;
+	border: 1px solid #222;
+	border-right: 0;	
 }
-.project:hover input,
-.task:hover input,
-.task:hover textarea {
-	border: 1px solid #aaa;
+.project input[type="text"]:hover,
+.task input[type="text"]:hover {
+	border-color: #4078c0;
 }
-.add-project {
-	margin-bottom: 200px;
+
+/* task */
+.task-add {
+	display: flex;
 }
+.task-add input[type="text"] {
+	flex: 1;
+}
+
 .task-wrapper {
-	width: 69%;
-	float: left;
-}
-.task-wrapper input[type="text"] {
-	width: 300px;
-	max-width: 300px;
+	width: 70%;
+	float: right;
+	padding-left: 2em;
 }
 .task {
-	margin-bottom: 10px;
-}
-.task:after {
-    content:'';
-    display:block;
-    clear: both;
-}
-.task input,
-.task .utility {
-	vertical-align: top;
-}
-.task .utility {
-	padding-top: 8px;
+	margin-bottom: 0.5em;
+	display: flex;
 }
 .task.completed > input {
 	text-decoration: line-through;
 	color: #4a4;
 }
-.timer {
-	display: none;
-	float: right;
-}
-.task.timer-on .timer {
-	display: inline-block;
-}
-.task-wrapper .timer input {
-	width: 24px;
-	padding: 5px 2px;
-}
-.colon {
-	display: inline-block;
-	padding: 7px 0 0 6px;
-}
-.timer-button {
+.task.completed .btn-complete {
 	color: #fff;
-	background: #999;
-	cursor: pointer;
-	padding: 7px 10px;
-	border-radius: 2px;
-	border: 1px solid #aaa;
-	display: inline-block;
-	width: 64px;
-	text-align: center;
+	background: #4a4;
+	border-color: #4a4;
 }
-.timer-button:hover {
-	background: #444;
-}
-.task textarea {
-	display: none;
-	float: right;
-	width: 288px;
-	max-width: 288px;
-	margin: 0!important;
-}
-.task.notes-on textarea {
-	display: inline-block;
-	clear: both;
-}
-.task.timer-on.notes-on textarea {
-	margin-top: 10px!important;
+.task.completed .btn-complete:hover {
+	color: #4a4;
+	background: #fff;
 }
