@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Task manager</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/angular.min.js"></script>
-	<script src="js/angular-animate.min.js"></script>
-	<script src="js/script.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Task manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-animate.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
 <body ng-controller="ManageCtrl">
-	<div class="wrap">
-		<header>
-			<div>Task manager</div>
-			<div class="restart" ng-click="reset()">restart</div>
-		</header>
-		<main>
-			<ul>      
-				<li ng-repeat="project in projects" class="project-list animate">
-					<div class="project-wrapper">
-						<div class="project">
-							<input type="text" value="{{project.name}}" placeholder="Project">
-							<span ng-click="remove($index)" class="btn btn-remove">remove</span>
-						</div>
-						<div ng-controller="TaskCtrl" class="task-wrapper">
-							<ul>
-								<li ng-repeat="task in tasks" class="animate">
-									<div class="task" ng-class="{ 'completed': completeTask }">
-										<input type="text" value="{{task.name}}" placeholder="Task">
-										<span ng-click="remove($index)" class="btn btn-remove">remove</span>
-										<span ng-click="completeTask = ! completeTask" class="btn btn-complete" title="mark as complete">complete</span>
-									</div>
-								</li>
-							</ul>
-							<form ng-submit="add()" class="task-add">
-								<input type="text" ng-model="taskName" placeholder="{{taskPlaceholder}}">
-								<input type="submit" value="add" class="btn btn-add">
-							</form>
-						</div>
-					</div>
-				</li>
-			</ul>
-			<form ng-submit="add()" class="project-add">
-				<input type="text" ng-model="projectName" placeholder="{{projectPlaceholder}}">
-				<input type="submit" value="add" class="btn btn-add">
-			</form>
-		</main>
-	</div>
+  <div class="wrap">
+    <header>
+      <div>Task manager</div>
+      <div class="restart" ng-click="reset()">restart</div>
+    </header>
+    <main>
+      <ul>      
+        <li ng-repeat="project in projects" class="project-list animate">
+          <div class="project-wrapper">
+            <div class="project">
+              <input type="text" value="{{project.name}}" placeholder="Project">
+              <span ng-click="remove($index)" class="btn btn-remove">remove</span>
+            </div>
+            <div ng-controller="TaskCtrl" class="task-wrapper">
+              <ul>
+                <li ng-repeat="task in tasks" class="animate">
+                  <div class="task" ng-class="{ 'completed': completeTask }">
+                    <input type="text" value="{{task.name}}" placeholder="Task">
+                    <span ng-click="remove($index)" class="btn btn-remove">remove</span>
+                    <span ng-click="completeTask = ! completeTask" class="btn btn-complete" title="mark as complete">complete</span>
+                  </div>
+                </li>
+              </ul>
+              <form ng-submit="add()" class="task-add">
+                <input type="text" ng-model="taskName" placeholder="{{taskPlaceholder}}">
+                <input type="submit" value="add" class="btn btn-add">
+              </form>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <form ng-submit="add()" class="project-add">
+        <input type="text" ng-model="projectName" placeholder="{{projectPlaceholder}}">
+        <input type="submit" value="add" class="btn btn-add">
+      </form>
+    </main>
+  </div>
 </body>
 </html>
